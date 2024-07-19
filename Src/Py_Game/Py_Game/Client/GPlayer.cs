@@ -700,16 +700,7 @@ namespace Py_Game.Client
                 #region Achievement System
                 case TGAMEPACKET.PLAYER_CALL_ACHIEVEMENT:
                     {
-                        string fileDir = @"C:\SendAchievements\";
-                        var PacketAchievements = File.ReadAllBytes(fileDir + "CompressAchievements.hex");
-
-                        if (PacketAchievements.Count() == 0)
-                        {
-                            return;
-                        }
-
-                        SendBytes(PacketAchievements);
-                        // new AchievementCoreSystem().PlayerGetAchievement(this, packet);
+                        new AchievementCoreSystem().PlayerGetAchievement(this, packet);
                     }
                     break;
                 #endregion

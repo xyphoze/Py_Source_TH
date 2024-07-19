@@ -148,11 +148,7 @@ namespace PangyaFileCore.Collections
             {
                 return false;
             }
-            if (Part.Base.Enabled == 1 && Part.Base.MoneyFlag == 0 || Part.Base.MoneyFlag == 1 || Part.Base.MoneyFlag == 2)
-            {
-                return true;
-            }
-            return false;
+            return true;
         }
 
         public bool IsExist(UInt32 TypeId)
